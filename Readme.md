@@ -102,6 +102,9 @@ An algorithm is a set of instructions for solving a problem or accomplishing a t
    * Sorting : arramging the elements either ascending or descending order
    * Merging : combine two different program element into single sorted file
     
-  
+
+Thanks! :heart:
+
+<img src="https://media3.giphy.com/media/RgAl2ESJFnIQ0/giphy.gif" alt="Spock" width="200" />
       
     
