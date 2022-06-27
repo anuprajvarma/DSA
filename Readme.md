@@ -29,7 +29,7 @@ An algorithm is a set of instructions for solving a problem or accomplishing a t
 
 ## Data Structure Classification
 
-<img src="https://static.javatpoint.com/ds/images/ds-introduction.png" width="150" />
+<img src="https://static.javatpoint.com/ds/images/ds-introduction.png" width="70%" />
 
 
 ## 1. Linear Data Structure
