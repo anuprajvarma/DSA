@@ -2,6 +2,30 @@
 using namespace std;
 #include "datatype.cpp"
 
+Node *takeInput()
+{
+    int data;
+    cin >> data;
+    Node *head = NULL;
+    Node *tail = NULL;
+    while (data != -1)
+    {
+        Node *newNode = new Node(data);
+        if (head == NULL)
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+        }
+        cin >> data;
+    }
+    return head;
+}
+
 void print(Node *head)
 {
     while (head != NULL)
@@ -26,7 +50,7 @@ int main()
     */
 
     // Dynamicaly
-    Node *n3 = new Node(1);
+    /*Node *n3 = new Node(1);
     Node *head = n3;
 
     Node *n4 = new Node(2);
@@ -37,7 +61,8 @@ int main()
     n3->next = n4;
     //(*n4).next = n5;
     // or
-    n4->next = n5;
+    n4->next = n5;*/
+    Node *head = takeInput();
 
     print(head);
 }
