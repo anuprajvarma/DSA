@@ -25,6 +25,54 @@ Node *takeInput()
     }
     return head;
 }
+Node *DeleteNode(Node *head, int i)
+{
+    Node *temp = head;
+    if (i == 0)
+    {
+        head = temp->next;
+        return head;
+    }
+    int c = 0;
+    while (temp != NULL && c < i - 1)
+    {
+        temp = temp->next;
+        c++;
+    }
+    if (temp != NULL)
+    {
+        Node *a = temp->next->next;
+        temp->next = a;
+    }
+
+    return head;
+}
+/*
+Node *InsetNode(Node *head, int i, int data)
+{
+    Node *newNode = new Node(data);
+    Node *temp = head;
+    if (i == 0)
+    {
+        newNode->next = head;
+        head = newNode;
+        return head;
+    }
+    int c = 0;
+    while (temp != NULL && c < i - 1)
+    {
+        temp = temp->next;
+        c++;
+    }
+    if (temp != NULL)
+    {
+        Node *a = temp->next;
+        temp->next = newNode;
+        newNode->next = a;
+    }
+    return head;
+}
+*/
 
 void print(Node *head)
 {
@@ -63,6 +111,16 @@ int main()
     // or
     n4->next = n5;*/
     Node *head = takeInput();
-
+    // print(head);
+    int i;
+    cin >> i;
+    head = DeleteNode(head, i);
     print(head);
+    /*
+    int i, data;
+    cin >> i >> data;
+    head = InsetNode(head, i, data);
+    cout << "insert element" << endl;
+    print(head);
+    */
 }
