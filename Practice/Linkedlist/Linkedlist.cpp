@@ -2,6 +2,8 @@
 using namespace std;
 #include "datatype.cpp"
 
+int c = 0;
+
 Node *takeInput()
 {
     int data;
@@ -10,6 +12,7 @@ Node *takeInput()
     Node *tail = NULL;
     while (data != -1)
     {
+        c++;
         Node *newNode = new Node(data);
         if (head == NULL)
         {
@@ -74,14 +77,27 @@ Node *InsetNode(Node *head, int i, int data)
 }
 */
 
-void print(Node *head)
+// Print by index
+void print(Node *head, int i)
 {
-    while (head != NULL)
+    Node *temp = head;
+    int t = 0;
+    while (t < i)
     {
-        cout << (*head).data << endl;
-        head = (*head).next;
+        temp = temp->next;
+        t++;
     }
+    cout << temp->data << endl;
 }
+
+// void print(Node *head)
+// {
+//     while (head != NULL)
+//     {
+//         cout << (*head).data << endl;
+//         head = (*head).next;
+//     }
+// }
 
 int main()
 {
@@ -111,11 +127,13 @@ int main()
     // or
     n4->next = n5;*/
     Node *head = takeInput();
-    // print(head);
-    int i;
-    cin >> i;
-    head = DeleteNode(head, i);
-    print(head);
+    int i = (c - 1) / 2;
+    print(head, i);
+    //  print(head);
+    //  int i;
+    //  cin >> i;
+    //  head = DeleteNode(head, i);
+    //  print(head);
     /*
     int i, data;
     cin >> i >> data;
