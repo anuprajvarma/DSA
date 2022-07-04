@@ -1,1 +1,0 @@
-{"name":"Local: mergeTwoSortedLinkedlist","url":"/home/anupraj/Documents/DSA/Practice/Linkedlist/mergeTwoSortedLinkedlist.cpp","tests":[{"id":1656911488816,"input":"1 4 5 -1\n2 3 4 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/anupraj/Documents/DSA/Practice/Linkedlist/mergeTwoSortedLinkedlist.cpp","group":"local","local":true}
