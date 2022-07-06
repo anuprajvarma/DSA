@@ -1,0 +1,1 @@
+{"name":"Local: mergeLinkedlist","url":"/home/anupraj/Documents/DSA/Leetcode/Linkedlist/mergeLinkedlist.cpp","tests":[{"id":1657094498074,"input":"2 -1\n1 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/anupraj/Documents/DSA/Leetcode/Linkedlist/mergeLinkedlist.cpp","group":"local","local":true}

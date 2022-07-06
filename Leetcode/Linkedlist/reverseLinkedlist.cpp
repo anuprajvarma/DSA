@@ -37,42 +37,27 @@ void print(Node *head)
         head = (*head).next;
     }
 }
-// when head is provided
-/*void deleteNode(Node *head, int n)
-{
-    Node *temp = head;
-    if (temp->data == n)
-    {
-        temp = temp->next;
-    }
-    else
-    {
-        int a = temp->next->data;
-        if (a == n)
-        {
-            temp->next = temp->next->next;
-        }
-        else
-        {
-            temp = temp->next;
-        }
-    }
-    print(temp);
-}*/
 
-// when head is not  provided
-void deleteNode(Node *head)
+Node *reverse(Node *head)
 {
+    Node *prev = NULL;
     Node *temp = head;
-    temp->data = temp->next->data;
-    temp->next = temp->next->next;
+    Node *next = NULL;
+
+    while (temp != NULL)
+    {
+        next = temp->next;
+        temp->next = prev;
+        prev = temp;
+        temp = next;
+    }
+    return prev;
 }
 
 int main()
 {
 
     Node *head = takeInput();
-    Node *head1 = head->next;
-    deleteNode(head1);
-    print(head);
+    Node *head1 = reverse(head);
+    print(head1);
 }
