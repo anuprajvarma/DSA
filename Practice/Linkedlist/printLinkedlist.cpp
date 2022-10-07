@@ -2,10 +2,40 @@
 using namespace std;
 #include "datatype.cpp"
 
+Node* takeinput(){
+    int data;
+    cin>>data;
+    Node *head = NULL;
+    Node *tail = NULL;
+    while (data!=-1)
+    {
+        Node *newnode = new Node(data);
+        if(head==NULL){
+            head=newnode;
+            tail=newnode;
+        }
+        else{
+            tail->next = newnode;
+            tail=tail->next;
+            //OR
+            //tail=newnode
+        }
+        cin>>data;
+    }
+    
+    return head;
+}
+
+void print(Node *head){
+    while (head!=NULL)
+    {
+        cout<<head->data<<" ";
+        head=head->next;
+    }
+    
+}
+
 int main(){
-    Node n1(1);
-    Node n2(6);
-    n1.next = &n2;
-    cout<<n1.data << " "<<n2.data;
-    return 0;
+   Node *head = takeinput();
+   print(head);
 }
