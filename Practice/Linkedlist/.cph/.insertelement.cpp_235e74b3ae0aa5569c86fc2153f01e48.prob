@@ -1,0 +1,1 @@
+{"name":"Local: insertelement","url":"/home/anuprajvarma/Documents/DSA/Practice/Linkedlist/insertelement.cpp","tests":[{"id":1665149142400,"input":"1 2 3 4 5 -1\n8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/anuprajvarma/Documents/DSA/Practice/Linkedlist/insertelement.cpp","group":"local","local":true}
